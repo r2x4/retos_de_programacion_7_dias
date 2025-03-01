@@ -5,3 +5,28 @@ body {
 h3 {
     text-align: center;
 }
+
+#iniciarPreguntas{
+    background-color: rgb(86, 108, 248);
+    color: aliceblue;
+    padding: 10px 22px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#iniciarPreguntas:hover{
+    background-color: rgb(124, 61, 240);
+}
+
+#iniciarPreguntas:active{
+    background-color: #3e8e41;
+    transform: scale(0.98);
+}
+
+#iniciarPreguntas:disabled{
+    background-attachment: #cccccc;
+    cursor: not-allowed;
+}
