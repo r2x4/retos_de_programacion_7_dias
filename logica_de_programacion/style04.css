@@ -8,7 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #333;
+    color: #111111;
 }
 
 /* Estilos para la tarjeta */
@@ -35,7 +35,7 @@ body {
 }
 
 h3 {
-    color: #333;
+    color: #141414;
     margin-bottom: 20px;
     font-size: 24px;
 }
@@ -44,14 +44,14 @@ h3 {
 #numeroUsuario {
     padding: 10px;
     font-size: 16px;
-    border: 2px solid #ddd;
+    border: 2px solid #7ac2f6;
     border-radius: 8px;
     width: calc(100% - 24px); 
     text-align: center;
     -moz-appearance: textfield; 
     appearance: textfield; 
     transition: border-color 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.8); 
+    background-color: rgba(167, 202, 239, 0.8); 
 }
 
 #numeroUsuario:focus {
@@ -97,10 +97,10 @@ button:active {
 /* Estilos para mensajes de retroalimentación */
 .retroalimentacion {
     font-size: 14px;
-    color: #721c24;
+    color: #ee0d23;
     margin-top: 10px;
     padding: 10px;
     border-radius: 5px;
-    background-color: rgba(248, 215, 218, 0.8); 
+    background-color: rgba(188, 225, 237, 0.8); 
     display: none; /* Oculto por defecto */
 }
