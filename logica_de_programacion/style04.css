@@ -1,0 +1,106 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #060606;
+}
+
+/* Estilos para la tarjeta */
+.card {
+    background-color: rgba(255, 255, 255, 0.6); 
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+    background-image: url('./samurai.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-blend-mode: overlay; 
+}
+
+/* Estilos para el juego */
+#juego {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+h3 {
+    color: #0f0f0f; /* Color oscuro para el texto */
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Estilos para el input (sin flechas) */
+#numeroUsuario {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #8ac7f6;
+    border-radius: 8px;
+    width: calc(100% - 24px); 
+    text-align: center;
+    -moz-appearance: textfield; 
+    appearance: textfield; 
+    transition: border-color 0.3s ease;
+    background-color: rgba(254, 254, 254, 0.8); 
+}
+
+#numeroUsuario:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#numeroUsuario::-webkit-outer-spin-button,
+#numeroUsuario::-webkit-inner-spin-button {
+    -webkit-appearance: none; 
+    margin: 0;
+}
+
+/* Estilos para los botones */
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#iniciarPreguntas {
+    background-color: #28a745;
+}
+
+#iniciarPreguntas:hover {
+    background-color: #218838;
+}
+
+/* Estilos para mensajes de retroalimentación */
+.retroalimentacion {
+    font-size: 14px;
+    color: #721c24;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    display: none; /* Oculto por defecto */
+}

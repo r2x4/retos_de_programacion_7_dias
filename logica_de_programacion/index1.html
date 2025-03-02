@@ -1,14 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript_Desde_Cero</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Adivina el Número</title>
+    <link rel="stylesheet" href="./style04.css">
 </head>
 <body>
-    <h3>Hola Rodrigo Practicando</h3>
+    <div class="card">
+        <h3>Hola Rodrigo, Practicando</h3>
+        <button id="iniciarPreguntas">Iniciar Juego</button>
 
-    <script src="03_exercise.js"></script>
+        <!-- Elementos para el juego -->
+        <div id="juego" style="display: none;">
+            <p id="mensaje"></p>
+            <input type="number" id="numeroUsuario" min="1" max="10" placeholder="Ingresa un número">
+            <button id="verificarNumero">Verificar</button>
+            <!-- Mensaje de retroalimentación -->
+            <p id="retroalimentacion" class="retroalimentacion"></p>
+        </div>
+    </div>
+
+    <script src="04_exercise.js"></script>
 </body>
 </html>
