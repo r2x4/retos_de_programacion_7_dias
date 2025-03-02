@@ -14,8 +14,14 @@ function iniciarJuego() {
     document.getElementById("juego").style.display = "flex";
     document.getElementById("mensaje").textContent = `Adivina un número entre 1 y ${numeroMaximo}. Tienes ${maximosIntentos} intentos.`;
 
+    // Borrar el campo de entrada
+    document.getElementById("numeroUsuario").value = "";
+
     // Ocultar retroalimentación al inicio
     document.getElementById("retroalimentacion").style.display = "none";
+    // Habilitar el campo de entrada y el botón de verificar
+    document.getElementById("numeroUsuario").disabled = false;
+    document.getElementById("verificarNumero").disabled = false;
 }
 
 // Función para verificar el número ingresado
@@ -24,8 +30,13 @@ function verificarNumero() {
     let retroalimentacion = document.getElementById("retroalimentacion");
 
     if (numeroUsuario === numeroSecreto) {
-        alert(`¡Acertaste! El número es: ${numeroUsuario}. Lo hiciste en ${intentos} ${intentos === 1 ? 'vez' : 'veces'}.`);
-        reiniciarJuego();
+        retroalimentacion.textContent = `¡Acertaste! El número es: ${numeroUsuario}. Lo hiciste en ${intentos} ${intentos === 1 ? 'vez' : 'veces'}.`;
+        retroalimentacion.style.display = "block";
+        // Deshabilitar el campo de entrada y el botón de verificar
+        document.getElementById("numeroUsuario").disabled = true;
+        document.getElementById("verificarNumero").disabled = true;
+        // Habilitar el botón "Iniciar Juego"
+        document.getElementById("iniciarPreguntas").disabled = false;
     } else {
         if (numeroUsuario > numeroSecreto) {
             retroalimentacion.textContent = "El número secreto es menor.";
@@ -38,18 +49,15 @@ function verificarNumero() {
         document.getElementById("numeroUsuario").value = "";
         intentos++;
         if (intentos > maximosIntentos) {
-            alert(`Número máximo de ${maximosIntentos} intentos alcanzado. El número secreto era ${numeroSecreto}.`);
-            reiniciarJuego();
+            retroalimentacion.textContent = `Número máximo de ${maximosIntentos} intentos alcanzado. El número secreto era ${numeroSecreto}.`;
+            retroalimentacion.style.display = "block";
+            // Deshabilitar el campo de entrada y el botón de verificar
+            document.getElementById("numeroUsuario").disabled = true;
+            document.getElementById("verificarNumero").disabled = true;
+            // Habilitar el botón "Iniciar Juego"
+            document.getElementById("iniciarPreguntas").disabled = false;
         }
     }
-}
-
-// Función para reiniciar el juego
-function reiniciarJuego() {
-    document.getElementById("juego").style.display = "none";
-    document.getElementById("numeroUsuario").value = "";
-    document.getElementById("mensaje").textContent = "";
-    document.getElementById("retroalimentacion").style.display = "none";
 }
 
 // Evento para iniciar el juego
@@ -57,3 +65,6 @@ document.getElementById("iniciarPreguntas").addEventListener("click", iniciarJue
 
 // Evento para verificar el número (solo se agrega una vez)
 document.getElementById("verificarNumero").addEventListener("click", verificarNumero);
+
+// Inicialmente, deshabilitar el botón "Iniciar Juego" si es necesario
+document.getElementById("iniciarPreguntas").disabled = false;
