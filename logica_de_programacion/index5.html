@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+    <link rel="stylesheet" href="style05.css"> 
+</head>
+<body>
+    <h2>Lista de Compras</h2>
+
+    <button id="iniciarCompra">Iniciar compra</button>
+
+
+    <div id="productoCard" class="card hidden">
+        <p id="productoNombre"></p>
+        <button id="btnSi">Sí</button>
+        <button id="btnNo">No</button>
+    </div>
+
+    
+    <button id="finalizarCompra" class="hidden">Finalizar compra</button>
+
+    
+    <div id="cuadroCompras" class="hidden">
+        <h3>Tu compra fue:</h3>
+        <ul id="listaCompras"></ul>
+    </div>
+
+    <script src="05_exercise.js"></script> 
+</body>
+</html>
